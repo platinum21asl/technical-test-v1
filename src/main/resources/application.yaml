@@ -1,0 +1,25 @@
+server:
+  port: 9191
+
+person:
+  name:
+    first: technical
+    last: test
+
+spring:
+  application:
+    name: technical-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/technicalTest?currentSchema=public
+    username: postgres
+    password: Admin123
+    driver-class-name: org.postgresql.Driver
+    maximumPoolSize: 10
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+    show-sql: true
+    generate-ddl: true
